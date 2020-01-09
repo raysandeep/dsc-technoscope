@@ -1,4 +1,4 @@
-#!/home/sandeep/dsc_proj/env/bin/python3
+#!/home/sandeep/dsc-technoscope/env/bin/python3
 
 # $Id: rstpep2html.py 4564 2006-05-21 20:44:42Z wiemann $
 # Author: David Goodger <goodger@python.org>

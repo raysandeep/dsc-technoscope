@@ -1,4 +1,4 @@
-#!/home/sandeep/dsc_proj/env/bin/python
+#!/home/sandeep/dsc-technoscope/env/bin/python
 
 import sys
 import getopt

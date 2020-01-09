@@ -1,4 +1,4 @@
-#!/home/sandeep/dsc_proj/env/bin/python3
+#!/home/sandeep/dsc-technoscope/env/bin/python3
 from django.core import management
 
 if __name__ == "__main__":
