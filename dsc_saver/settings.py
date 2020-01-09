@@ -27,7 +27,7 @@ SECRET_KEY = '8-j+wb7=tid$qa+%a!xopwp5^k19u&m)p%6m%ij43jskab_w79'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['technoscope.herokuapp.com/']
+ALLOWED_HOSTS = ['technoscope.herokuapp.com']
 
 
 # Application definition
