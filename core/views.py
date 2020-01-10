@@ -59,3 +59,15 @@ class DepartmentView(APIView):
             return Response(department_serializer.data, status=status.HTTP_201_CREATED)
         else:
             return Response(department_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+def department_view(request):
+    if request.method == "POST":
+        print(request.POST)
+        department_serializer = UpoloaderrSerializer(data=request.POST)
+    
+    if department_serializer.is_valid():
+            department_serializer.save()
+            return HttpResponse(department_serializer.data)
+        else:
+            return HttpResponse(department_serializer.errors)
