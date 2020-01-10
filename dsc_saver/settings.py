@@ -27,17 +27,12 @@ SECRET_KEY = '8-j+wb7=tid$qa+%a!xopwp5^k19u&m)p%6m%ij43jskab_w79'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'iwa-ts2020.org',
-    'localhost',
-    'technoscope.herokuapp.com'
-]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,19 +40,19 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'storages',
-    'rest_framework',
     'core',
+    'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
-
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
@@ -130,13 +125,8 @@ USE_L10N = True
 USE_TZ = True
 
 CORS_ORIGIN_ALLOW_ALL = True
-# CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_CREDENTIALS = True
 
-# CORS_ORIGIN_WHITELIST = [
-#     'https://iwa-ts2020.org',
-#     'https://iwa-ts2020.org/',
-#     'https://technoscape.herokuapp.com'
-# ]
 
 
 # Static files (CSS, JavaScript, Images)

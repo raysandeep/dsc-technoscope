@@ -15,7 +15,6 @@ class DepartmentView(APIView):
     def get(self, request, *args, **kwargs):
     
         email  = request.GET.get("email")
-        print(email)
         if email:
             snippets = models.uploader.objects.filter(email=email)
             try:
@@ -33,7 +32,7 @@ class DepartmentView(APIView):
                     
                 else:
                     dicti = {
-                        'status':'success',
+                        'status':'sucess',
                         'email': email,
                         'files':lis
                     }
@@ -51,30 +50,9 @@ class DepartmentView(APIView):
             return Response(dicti)
             
     def post(self, request, *args, **kwargs):
-        print(request.data)
-        # department_serializer = UpoloaderrSerializer(data=request.data)
-
-        # if department_serializer.is_valid():
-        #     department_serializer.save()
-        #     return Response(department_serializer.data, status=status.HTTP_201_CREATED)
-        # else:
-        #     return Response(department_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-def department_view(request):
-    if request.method == "POST":
-        print(request.POST)
-        author = request.POST.get("author")
-        coress_author = request.POST.get("coress_author")
-        email = request.POST.get("email")
-        alt_email = request.POST.get("alt_email")
-        phone = request.POST.get("phone")
-        phone_phoneCode = request.POST.get("phone_phoneCode")
-        file = request.FILES['file']
-        print("Successfully Printed all params")
-        return HttpResponse("Working")
-
-class Health(APIView):
-    def get(self):
-        return Response({"status": "Hello World"})
-
+        department_serializer = UpoloaderrSerializer(data=request.data)
+        if department_serializer.is_valid():
+            department_serializer.save()
+            return Response(department_serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(department_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
