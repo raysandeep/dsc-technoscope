@@ -89,7 +89,7 @@ DATABASES = {
 }
 if os.environ.get("DATABASE_URL") is not None:
     DATABASES['default'] = dj_database_url.config()
-    DEBUG = False
+    DEBUG = True
 
 
 
@@ -114,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = False
 
-DEBUG = True
+
 
 
 # Internationalization
