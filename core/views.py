@@ -64,7 +64,7 @@ class DepartmentView(APIView):
 def department_view(request):
     if request.method == "POST":
         print(request.POST)
-        department_serializer = UpoloaderrSerializer(data=request.POST)
+        department_serializer = UpoloaderrSerializer(data=request.POST, file=request.FILES)
     
     if department_serializer.is_valid():
             department_serializer.save()
