@@ -74,7 +74,7 @@ def department_view(request):
         print("Successfully Printed all params")
         return HttpResponse("Working")
 
-class Health(APIVew):
+class Health(APIView):
     def get(self):
         return Response({"status": "Hello World"})
 
