@@ -29,7 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'iwa-ts2020.org',
-    'localhost'
+    'localhost',
+    'technoscope.herokuapp.com'
 ]
 
 
