@@ -55,4 +55,5 @@ class DepartmentView(APIView):
             department_serializer.save()
             return Response(department_serializer.data, status=status.HTTP_201_CREATED)
         else:
+            print(department_serializer.errors)
             return Response(department_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
