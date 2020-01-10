@@ -4,7 +4,7 @@ from .serializers import UpoloaderrSerializer
 # Create your views here
 from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser, FormParser
-from rest_framework status, permissions
+from rest_framework import status, permissions
 from rest_framework.views import APIView
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
