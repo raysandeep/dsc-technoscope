@@ -73,5 +73,6 @@ def department_view(request):
         return HttpResponse(department_serializer.errors)
 
 class Health(APIVIew):
-    return Response({"status": "Hello World"})
+    def get(self)
+        return Response({"status": "Hello World"})
 
