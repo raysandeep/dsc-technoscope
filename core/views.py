@@ -69,5 +69,5 @@ def department_view(request):
     if department_serializer.is_valid():
             department_serializer.save()
             return HttpResponse(department_serializer.data)
-        else:
-            return HttpResponse(department_serializer.errors)
+    else:
+        return HttpResponse(department_serializer.errors)
