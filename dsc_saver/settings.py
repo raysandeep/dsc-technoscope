@@ -147,3 +147,6 @@ AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_DEFAULT_ACL = None
 AWS_PUBLIC_MEDIA_LOCATION = 'media/public'
 DEFAULT_FILE_STORAGE = 'mysite.storage_backends.PublicMediaStorage'
+
+
+django_heroku.settings(locals())
