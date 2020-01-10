@@ -53,12 +53,7 @@ class DepartmentView(APIView):
         department_serializer = UpoloaderrSerializer(data=request.data)
         if department_serializer.is_valid():
             department_serializer.save()
-            response = Response(department_serializer.data, status=status.HTTP_201_CREATED)
-            response["Access-Control-Allow-Origin"] = "*"
-            response["Access-Control-Allow-Methods"] = "GET, OPTIONS"
-            response["Access-Control-Max-Age"] = "1000"
-            response["Access-Control-Allow-Headers"] = "X-Requested-With, Content-Type"
-            return response
+            return  Response(department_serializer.data, status=status.HTTP_201_CREATED)
         else:
             print(department_serializer.errors)
             return Response(department_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
