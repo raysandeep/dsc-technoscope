@@ -32,7 +32,7 @@ class DepartmentView(APIView):
                     
                 else:
                     dicti = {
-                        'status':'sucess',
+                        'status':'success',
                         'email': email,
                         'files':lis
                     }
