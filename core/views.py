@@ -15,6 +15,7 @@ class DepartmentView(APIView):
     def get(self, request, *args, **kwargs):
     
         email  = request.GET.get("email")
+        print(email)
         if email:
             snippets = models.uploader.objects.filter(email=email)
             try:
@@ -50,7 +51,9 @@ class DepartmentView(APIView):
             return Response(dicti)
             
     def post(self, request, *args, **kwargs):
+        print(request.data)
         department_serializer = UpoloaderrSerializer(data=request.data)
+
         if department_serializer.is_valid():
             department_serializer.save()
             return Response(department_serializer.data, status=status.HTTP_201_CREATED)
